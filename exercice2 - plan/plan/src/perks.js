@@ -13,7 +13,7 @@ const Perks = (props) => {
     else if (checked === false) {
         return (
             <li className="advantage">
-                <span className="advantage__checkmark"></span>
+                <span className="advantage__checkmark">      </span>
                 <p className="advantage__text">{text}</p>
             </li>
         );
