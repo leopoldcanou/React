@@ -31,6 +31,10 @@ const router = createBrowserRouter([
         element: <OurTeams />,
         loader: ourTeamLoader,
       },
+      {
+        path: '/crash',
+        element: <ErrorPage />,
+      },
       fetchTestimonialData,
     ],
   },
