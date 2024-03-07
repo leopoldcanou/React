@@ -1,11 +1,12 @@
+import Navbar from "../ui/NavBar/index";
+import { Outlet } from "react-router-dom";
 
 export default function Root() {
-
   return (
     <>
-      <section>
-        Hello World !
-      </section>
+      <Navbar />
+      <Outlet />
+      <section></section>
     </>
   );
 }

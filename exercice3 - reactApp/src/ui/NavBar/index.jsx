@@ -1,32 +1,49 @@
-import {Link} from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
-
-    return (
-
-<nav
-  className="flex-no-wrap relative flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
-  <div className="flex w-full flex-wrap items-center justify-between px-3"> 
-   
-    <div className="list-style-none me-auto flex flex-col ps-0 lg:flex-row text-white space-x-10">
-  
-        <div className="list-style-none me-auto flex flex-col ps-0 lg:flex-row text-white">
-          <a className="mb-4 lg:mb-0 lg:pe-2 text-[#BBA]" href="/crash">Our Teams </a>
-          <a className="mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/team/sales">Sales</a>
-          <a className="mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/team/webdesign">Webdesign</a>
-          <a className="mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/team/development">Development</a>
+  return (
+    <nav className="relative flex flex-no-wrap items-center justify-between w-full py-2 shadow-dark-mild bg-zinc-50 lg:flex-wrap lg:justify-start lg:py-4 dark:bg-neutral-700">
+      <div className="flex flex-wrap items-center justify-between w-full px-3">
+        <div className="flex flex-col space-x-10 text-white list-style-none me-auto ps-0 lg:flex-row">
+          <div className="flex flex-col text-white list-style-none me-auto ps-0 lg:flex-row">
+            <Link className="mb-4 text-[#BBA] lg:mb-0 lg:pe-2" to="/crash">
+              Our Teams{" "}
+            </Link>
+            <Link
+              className="mb-4 hover:text-[#BBA] focus:text-[#BB0] lg:mb-0 lg:pe-2"
+              to="/team/sales"
+            >
+              Sales
+            </Link>
+            <Link
+              className="mb-4 hover:text-[#BBA] focus:text-[#BB0] lg:mb-0 lg:pe-2"
+              to="/team/webdesign"
+            >
+              Webdesign
+            </Link>
+            <Link
+              className="mb-4 hover:text-[#BBA] focus:text-[#BB0] lg:mb-0 lg:pe-2"
+              to="/team/development"
+            >
+              Development
+            </Link>
+          </div>
+          <div className="flex flex-col space-x-10 text-white list-style-none me-auto ps-0 lg:flex-row">
+            <Link
+              className="ml-15 mb-4 hover:text-[#BBA] focus:text-[#BB0] lg:mb-0 lg:pe-2"
+              to="/buy"
+            >
+              Buy
+            </Link>
+            <Link
+              className="mb-4 hover:text-[#BBA] focus:text-[#BB0] lg:mb-0 lg:pe-2"
+              to="/about"
+            >
+              ?
+            </Link>
+          </div>
         </div>
-        <div className="list-style-none me-auto flex flex-col ps-0 lg:flex-row text-white space-x-10">
-          <a className="ml-15 mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/buy">Buy</a>
-          <a className="mb-4 lg:mb-0 lg:pe-2 hover:text-[#BBA] focus:text-[#BB0]" href="/about">?</a>
-        </div>
-          
-    </div>
-    
-  </div>
-</nav>
-    );
-
+      </div>
+    </nav>
+  );
 }
-
